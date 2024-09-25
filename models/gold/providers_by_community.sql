@@ -3,6 +3,9 @@ MODEL (
   kind FULL,
   cron '@daily',
   grain (community_name,active),
+  audits (
+    not_null(columns := (community_name))
+  )
 );
 
 SELECT

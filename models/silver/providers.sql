@@ -3,6 +3,7 @@ MODEL (
   kind FULL,
   cron '@daily',
   grain full_name,
+  audits (assert_not_null_providers)
 );
 
 SELECT
